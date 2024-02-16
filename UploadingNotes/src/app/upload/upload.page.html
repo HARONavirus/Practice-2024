@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Загрузка конспекта</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Учебная дисциплина</ion-label>
+      <ion-input [(ngModel)]="discipline"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Название темы</ion-label>
+      <ion-input [(ngModel)]="topic"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">ФИО преподавателя</ion-label>
+      <ion-input [(ngModel)]="teacher"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">URL-адрес конспекта</ion-label>
+      <ion-input type="url" [(ngModel)]="noteUrl" name="noteUrl"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="uploadFile()">Загрузить</ion-button>
+</ion-content>

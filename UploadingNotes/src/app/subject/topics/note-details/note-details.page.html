@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Детали конспекта</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="note">
+    <ion-card-header>
+      <ion-card-title>{{ discipline }} - {{ topic }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>ФИО преподавателя</ion-label>
+        <ion-note slot="end">{{ note.teacher }}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-item>
+          <ion-label>Конспект</ion-label>
+          <ion-note slot="end">
+            <a [href]="note.summary" target="_blank" (click)="openSummary(note.summary)">Открыть конспект</a>
+          </ion-note>
+        </ion-item>        
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
